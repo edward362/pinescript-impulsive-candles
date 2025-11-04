@@ -87,7 +87,7 @@ without needing a footprint or order-flow chart.
 ## 🔍 Why This Reflects Order Flow Imbalance
 
 <p align="center">
-  <img src="./docs/assets/Screenshot%202025-11-04%20224200.png" width="47%" alt="15-min chart view" />
+  <img src="./docs/assets/Screenshot%202025-11-04%20224200.png" width="70%" alt="15-min chart view" />
   <img src="./docs/assets/Screenshot%202025-11-04%20224739.png" width="47%" alt="Footprint chart view" />
 </p>
 
