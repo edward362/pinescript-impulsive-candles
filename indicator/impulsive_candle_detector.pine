@@ -1,0 +1,80 @@
+//@version=6
+// =====================================================================
+//  Impulsive Candles — ATR×, Volume & Body Filters, Midline + BS/SS & TP
+//  Author: Edward Bauduin (edward.bauduin@enpc.fr)
+//  License: MIT (see LICENSE in repository root)
+//  Version: v1.0.0
+//  Summary:
+//   Flags impulsive bars when:
+//     - bar range >= ATR * multiplier
+//     - volume >= SMA(volume, volLen) * volMult
+//     - body% of range >= minBodyP
+//   Draws body midline, and prints BS/SS & TP levels relative to close.
+//   Shows ratio = (high-low)/ATR in data window and label.
+//
+//  Notes:
+//   - Designed for futures scalping, short-term order flow context.
+//   - All drawings are per-bar (no forward repainting).
+//   - Tune multipliers by instrument & session (e.g., Asia).
+// =====================================================================
+
+//@version=6
+indicator("Impulsive Candles (ATR×, Vol & Body Filters, Body Midline + BS/SS & TP)", overlay=true, max_labels_count=500, max_lines_count=500)
+
+// Inputs
+atrLen = input.int(14, "ATR length", minval=1)
+mult = input.float(1.50, "Range ≥ ATR ×", step=0.05)
+volLen = input.int(50, "Volume MA length", minval=1)
+volMult = input.float(1.50, "Volume ≥ VolMA ×", step=0.05)
+minBodyP = input.float(0.60, "Min body % of range (0–1)", step=0.05)
+tickFrac = input.float(0.25, "Tick width (bar fraction)", minval=0.05, maxval=0.9, step=0.05)
+
+// Core calcs
+atr = ta.atr(atrLen)
+rng = high - low
+body = math.abs(close - open)
+ratio = atr > 0 ? rng / atr : na
+volMA = ta.sma(volume, volLen)
+bodyPct = rng > 0 ? body / rng : 0.0
+isImpulsive = (ratio >= mult) and (volume > volMA * volMult) and (bodyPct >= minBodyP)
+
+// Visuals
+barcolor(isImpulsive ? (close >= open ? color.teal : color.fuchsia) : na)
+plotshape(isImpulsive, title="Impulsive", style=shape.triangleup, color=color.new(color.gray,0), location=location.abovebar, size=size.tiny)
+
+// Body midline + BS/SS & TP ticks
+if isImpulsive
+    bodyMid = (open + close) / 2.0
+    halfMs = int(math.round(timeframe.in_seconds() * 1000.0 * (tickFrac / 2.0)))
+
+    // midline
+    line.new(time - halfMs, bodyMid, time + halfMs, bodyMid, xloc=xloc.bar_time, extend=extend.none, color=color.new(color.gray,0), width=2)
+
+    // levels from close using body size
+    if close < open  // bearish impulse -> LONG side levels above close
+        bs = close + 0.10 * body
+        tp = close + 0.40 * body
+        line.new(time - halfMs, bs, time + halfMs, bs, xloc=xloc.bar_time, extend=extend.none, color=color.new(color.lime,0), width=2)
+        line.new(time - halfMs, tp, time + halfMs, tp, xloc=xloc.bar_time, extend=extend.none, color=color.new(color.green,0), width=2)
+        label.new(bar_index, bs, "BS", style=label.style_label_left, textcolor=color.white, color=color.new(color.lime,0))
+        label.new(bar_index, tp, "TP", style=label.style_label_left, textcolor=color.white, color=color.new(color.green,0))
+    else if close > open // bullish impulse -> SHORT side levels below close
+        ss = close - 0.10 * body
+        tp2 = close - 0.40 * body
+        line.new(time - halfMs, ss, time + halfMs, ss, xloc=xloc.bar_time, extend=extend.none, color=color.new(color.red,0), width=2)
+        line.new(time - halfMs, tp2, time + halfMs, tp2, xloc=xloc.bar_time, extend=extend.none, color=color.new(color.orange,0), width=2)
+        label.new(bar_index, ss, "SS", style=label.style_label_left, textcolor=color.white, color=color.new(color.red,0))
+        label.new(bar_index, tp2, "TP", style=label.style_label_left, textcolor=color.white, color=color.new(color.orange,0))
+
+    // ratio label (kept)
+    label.new(bar_index, high, str.tostring(ratio, format.mintick), style=label.style_label_down, textcolor=color.white, color=color.new(color.gray,0))
+
+// Data window
+plot(ratio, title="Range/ATR ratio", display=display.data_window, color=color.new(color.gray,100))
+plot(rng, title="Range", display=display.data_window, color=color.new(color.gray,100))
+plot(atr, title="ATR(14)", display=display.data_window, color=color.new(color.gray,100))
+plot(bodyPct, title="Body %", display=display.data_window, color=color.new(color.gray,100))
+plot(volMA, title="VolMA", display=display.data_window, color=color.new(color.gray,100))
+
+// Alert (unchanged)
+alertcondition(isImpulsive, "Impulsive bar (filtered)", "Filtered impulsive bar: Range/ATR = {{plot_0}}")
