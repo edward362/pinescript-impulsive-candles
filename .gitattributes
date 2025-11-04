@@ -1,1 +1,3 @@
+# Make .pine count as code for GitHub linguist (fallback to JS highlighting)
+*.pine linguist-language=JavaScript
 
