@@ -1,4 +1,3 @@
-<!-- Banner -->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:001F3F,100:004080&height=220&section=header&text=Impulsive%20Candles%20Indicator&fontColor=ffffff&fontSize=45&desc=Pine%20Script%20v6%20—%20ATR×,%20Volume,%20and%20Body%20Filters%20for%20Momentum%20Detection&descAlignY=65" alt="banner"/>
 </p>
@@ -64,7 +63,7 @@ It bridges the gap between **price action** and **order flow**, providing a “l
 **How to interpret this chart:**  
 - Early in the session, several **bearish impulses** (2.50 – 3.00) reveal a **dominant sell-side imbalance**, showing that liquidity is being consumed aggressively to the downside.  
 - A lone **teal 1.75 impulse** marks short-covering and temporary absorption, but the following **fuchsia 2.00** bar confirms renewed sell-side aggression.  
-- Later, around 16 : 00, another **2.25 impulse** prints, finalizing the cluster before volatility compresses.
+- Later, around 16:00, another **2.25 impulse** prints, finalizing the cluster before volatility compresses.
 
 **The practical takeaway:**  
 Clusters of impulsive candles help traders **anchor directional bias** and **time entries** —  
@@ -118,6 +117,7 @@ all **without needing a footprint or order-flow chart**.
 ---
 
 ## 🧩 License
+
 This project is released under the **MIT License**.  
 You are free to modify and distribute it with attribution.
 
