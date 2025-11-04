@@ -91,10 +91,10 @@ without needing a footprint or order-flow chart.
   <img src="./docs/assets/Screenshot%202025-11-04%20224739.png" width="70%" alt="Footprint chart view" />
 </p>
 
-On the **left**, we see what the **Impulsive Candles Indicator** highlights on a standard 15-minute chart — a **fuchsia impulsive candle** with an ATR ratio of `2.25×`.  
+On the **top**, we see what the **Impulsive Candles Indicator** highlights on a standard 15-minute chart — a **fuchsia impulsive candle** with an ATR ratio of `2.25×`.  
 To a regular chart user, this simply looks like a strong bearish candle, but the indicator is actually flagging an event of **true order flow imbalance**.
 
-If we **zoom into the same candle on a footprint chart** (image on the right), we uncover the real structure of that move:
+If we **zoom into the same candle on a footprint chart** (image at the bottom), we uncover the real structure of that move:
 - The candle corresponds to a **large negative delta of -162.56K**, meaning **massive aggressive selling** overwhelmed liquidity on the bid side.
 - Volume was concentrated at the lower half of the bar, leaving behind an **inefficient auction** — a zone where sellers pushed too aggressively, creating an unbalanced price area with very few passive buyers.
 
