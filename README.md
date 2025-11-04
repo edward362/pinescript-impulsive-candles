@@ -91,25 +91,25 @@ without needing a footprint or order-flow chart.
   <img src="./docs/assets/Screenshot%202025-11-04%20224739.png" width="70%" alt="Footprint chart view" />
 </p>
 
-On the **top**, we see what the **Impulsive Candles Indicator** highlights on a standard 15-minute chart — a **fuchsia impulsive candle** with an ATR ratio of `2.25×`.  
+On the **top**, we see what the **Impulsive Candles Indicator** highlights on a standard 15-minute chart: a **fuchsia impulsive candle** with an ATR ratio of `2.25×`.  
 To a regular chart user, this simply looks like a strong bearish candle, but the indicator is actually flagging an event of **true order flow imbalance**.
 
 If we **zoom into the same candle on a footprint chart** (image at the bottom), we uncover the real structure of that move:
 - The candle corresponds to a **large negative delta of -162.56K**, meaning **massive aggressive selling** overwhelmed liquidity on the bid side.
-- Volume was concentrated at the lower half of the bar, leaving behind an **inefficient auction** — a zone where sellers pushed too aggressively, creating an unbalanced price area with very few passive buyers.
+- Volume was concentrated at the lower half of the bar, leaving behind an **inefficient auction**, a zone where sellers pushed too aggressively and created an unbalanced price area with very few passive buyers.
 
 In the following bars, we observe a **bullish retracement** where delta flips to **+676**, but price climbs efficiently through the same zone with **minimal buying effort**.  
-This is a classic footprint signature of an **imbalanced-to-balanced transition** — the market revisiting an inefficiency left by prior aggressive selling, now efficiently re-auctioned by buyers.
+This is a classic footprint signature of an **imbalanced to balanced transition**, where the market revisits an inefficiency left by prior aggressive selling and efficiently re-auctions the zone.
 
-What makes the **Impulsive Candles Indicator** so powerful is that it allows non–order flow traders to **infer this hidden imbalance visually**, without needing a footprint chart:
+What makes the **Impulsive Candles Indicator** so powerful is that it allows non order flow traders to **infer this hidden imbalance visually** without needing a footprint chart:
 - The **fuchsia impulse** instantly signals where an inefficiency (thin liquidity zone) was created.  
-- The **midline** drawn at the 50 % of the candle’s body provides a reference for where a **retracement is likely to rebalance liquidity**.  
+- The **midline** drawn at 50% of the candle’s body provides a reference for where a **retracement is likely to rebalance liquidity**.  
 - Traders can anticipate **bullish retracements** into these zones (as seen above) or look for **continuations** if the inefficiency remains unfilled.
 
 In other words, this indicator acts as a **bridge between price action and order flow**, distilling complex microstructural information into a single visual cue.
 
 > 💡 The practical takeaway: impulsive candles mark where **aggressive participation** disrupted the auction process.  
-> These levels tend to attract price later as the market rebalances — allowing traders to profit from **retracements into prior imbalanced zones** without ever needing to open a footprint chart.
+> These levels tend to attract price later as the market rebalances, allowing traders to profit from **retracements into prior imbalanced zones** without ever needing to open a footprint chart.
 
 ---
 
