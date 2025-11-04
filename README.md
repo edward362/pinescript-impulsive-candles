@@ -49,13 +49,37 @@ It bridges the gap between **price action** and **order flow**, providing a “l
 
 ---
 
-## 🖼️ Visual Example
+## 🖼️ Visual Example — 15-min ES (E-mini S&P 500 Futures)
 
 <p align="center">
-  <img src="./docs/assets/example_chart_1.png" width="80%" alt="Example chart showcasing impulsive candles">
+  <img src="./docs/assets/Screenshot%202025-11-04%20222053.png" width="88%" alt="ES 15-minute chart with impulsive candles highlighted">
 </p>
 
-> The teal and fuchsia candles indicate impulsive moves. Horizontal levels mark the midline and target zones derived from body size.
+**What you’re seeing:**  
+- The indicator highlights **impulsive candles** using three simultaneous filters:  
+  **ATR× range expansion**, **volume vs. volMA**, and **body-percent dominance**.  
+- **Fuchsia bars** → bearish impulses (aggressive selling) | **Teal bars** → bullish impulses (aggressive buying).  
+- The small **gray labels** above each impulse (e.g. 2.50, 3.00, 1.75) show the **Range ÷ ATR** ratio — quantifying how strong each candle’s move is relative to background volatility.
+
+**How to interpret this chart:**  
+- Early in the session, several **bearish impulses** (2.50 – 3.00) reveal a **dominant sell-side imbalance**, showing that liquidity is being consumed aggressively to the downside.  
+- A lone **teal 1.75 impulse** marks short-covering and temporary absorption, but the following **fuchsia 2.00** bar confirms renewed sell-side aggression.  
+- Later, around 16 : 00, another **2.25 impulse** prints, finalizing the cluster before volatility compresses.
+
+**The practical takeaway:**  
+Clusters of impulsive candles help traders **anchor directional bias** and **time entries** —  
+for example, favoring **pullback shorts** into prior impulsive zones when bearish impulses dominate,  
+or staying flat when the tape stops printing new impulses.  
+
+To support this visually, each impulsive candle automatically plots a **midline at 50 % of its body**,  
+giving **price-action traders a reference for likely retracement zones**.  
+These midlines often align with **Fibonacci retracement areas (50 % – 61.8 %)**,  
+allowing traders to anticipate where price may **pull back before continuation** —  
+all **without needing a footprint or order-flow chart**.
+
+> 🧭 In short, the combination of impulse clusters + body-midline levels  
+> provides a clean, order-flow-aware framework derived entirely from price action —  
+> perfect for discretionary traders who want context without raw delta data.
 
 ---
 
