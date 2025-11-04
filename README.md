@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:001F3F,100:004080&height=220&section=header&text=Impulsive%20Candles%20Indicator&fontColor=ffffff&fontSize=45&desc=Pine%20Script%20v6%20—%20ATR×,%20Volume,%20and%20Body%20Filters%20for%20Momentum%20Detection&descAlignY=65" alt="banner"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:001F3F,100:004080&height=220&section=header&text=Impulsive%20Candles%20Indicator&fontColor=ffffff&fontSize=45&desc=Pine%20Script%20v6%20|%20ATR×,%20Volume,%20and%20Body%20Filters%20for%20Momentum%20Detection&descAlignY=65" alt="banner"/>
 </p>
 
 <p align="center">
@@ -10,14 +10,14 @@
 
 ## 🧩 Overview
 
-The **Impulsive Candles Indicator** is a *TradingView Pine Script v6* tool designed to automatically highlight impulsive price moves — moments of strong participation and directional intent — without requiring traders to read order flow or footprint charts.  
+The **Impulsive Candles Indicator** is a *TradingView Pine Script v6* tool designed to automatically highlight impulsive price moves, moments of strong participation and directional intent, without requiring traders to read order flow or footprint charts.  
 
 It acts as a **visual proxy for order flow imbalance**, combining **volatility (ATR)**, **volume strength**, and **candle body dominance** to detect when the market transitions from passive to aggressive trading behavior.  
 
 This makes it particularly useful for:
 - Discretionary traders who **don’t use DOM or footprint charts**  
-- Scalpers looking to **spot aggressive buyers/sellers** early  
-- Algorithmic traders who need **quantifiable triggers** for impulsive activity  
+- Scalpers looking to **spot aggressive buyers/sellers early**  
+- Algorithmic traders who need **quantifiable triggers for impulsive activity**
 
 ---
 
@@ -37,18 +37,18 @@ If all conditions are satisfied:
 
 ## 📊 Why It Helps Traders
 
-In fast markets, **not everyone uses footprint or delta-based tools** — but impulsive movement *always* leaves a footprint on price, range, and volume.  
+In fast markets, **not everyone uses footprint or delta-based tools**, but impulsive movement *always* leaves a footprint on price, range, and volume.  
 This script visually encapsulates that data, allowing traders to:
 - Detect **localized liquidity imbalances**  
 - Anticipate **stop runs or structural shifts**  
 - Align entries with **market-generated momentum**  
-- Use impulse candles as **anchor points for setups**  
+- Use impulse candles as **anchor points for setups**
 
 It bridges the gap between **price action** and **order flow**, providing a “lite” version of order flow context *right on the chart.*
 
 ---
 
-## 🖼️ Visual Example — 15-min ES (E-mini S&P 500 Futures)
+## 🖼️ Visual Example (15-min ES - E-mini S&P 500 Futures)
 
 <p align="center">
   <img src="./docs/assets/Screenshot%202025-11-04%20222053.png" width="88%" alt="ES 15-minute chart with impulsive candles highlighted">
@@ -57,8 +57,8 @@ It bridges the gap between **price action** and **order flow**, providing a “l
 **What you’re seeing:**  
 - The indicator highlights **impulsive candles** using three simultaneous filters:  
   **ATR× range expansion**, **volume vs. volMA**, and **body-percent dominance**.  
-- **Fuchsia bars** → bearish impulses (aggressive selling) | **Teal bars** → bullish impulses (aggressive buying).  
-- The small **gray labels** above each impulse (e.g. 2.50, 3.00, 1.75) show the **Range ÷ ATR** ratio — quantifying how strong each candle’s move is relative to background volatility.
+- **Fuchsia bars** → bearish impulses (aggressive selling) | **Teal bars** → bullish impulses (aggressive buying).  
+- The small **gray labels** above each impulse (e.g. 2.50, 3.00, 1.75) show the **Range ÷ ATR** ratio, quantifying how strong each candle’s move is relative to background volatility.
 
 **How to interpret this chart:**  
 - Early in the session, several **bearish impulses** (2.50 – 3.00) reveal a **dominant sell-side imbalance**, showing that liquidity is being consumed aggressively to the downside.  
@@ -66,18 +66,18 @@ It bridges the gap between **price action** and **order flow**, providing a “l
 - Later, around 16:00, another **2.25 impulse** prints, finalizing the cluster before volatility compresses.
 
 **The practical takeaway:**  
-Clusters of impulsive candles help traders **anchor directional bias** and **time entries** —  
-for example, favoring **pullback shorts** into prior impulsive zones when bearish impulses dominate,  
+Clusters of impulsive candles help traders **anchor directional bias** and **time entries**.  
+For example, favoring **pullback shorts** into prior impulsive zones when bearish impulses dominate,  
 or staying flat when the tape stops printing new impulses.  
 
-To support this visually, each impulsive candle automatically plots a **midline at 50 % of its body**,  
+To support this visually, each impulsive candle automatically plots a **midline at 50% of its body**,  
 giving **price-action traders a reference for likely retracement zones**.  
-These midlines often align with **Fibonacci retracement areas (50 % – 61.8 %)**,  
-allowing traders to anticipate where price may **pull back before continuation** —  
-all **without needing a footprint or order-flow chart**.
+These midlines often align with **Fibonacci retracement areas (50% – 61.8%)**,  
+allowing traders to anticipate where price may **pull back before continuation**,  
+without needing a footprint or order-flow chart.
 
 > 🧭 In short, the combination of impulse clusters + body-midline levels  
-> provides a clean, order-flow-aware framework derived entirely from price action —  
+> provides a clean, order-flow-aware framework derived entirely from price action,  
 > perfect for discretionary traders who want context without raw delta data.
 
 ---
