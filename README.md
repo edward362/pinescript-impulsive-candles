@@ -76,7 +76,7 @@ These midlines often align with **Fibonacci retracement areas (50% – 61.8%)**,
 allowing traders to anticipate where price may **pull back before continuation**,  
 without needing a footprint or order-flow chart.
 
-> 🧭 In short, the combination of impulse clusters + body-midline levels  
+> In short, the combination of impulse clusters + body-midline levels  
 > provides a clean, order-flow-aware framework derived entirely from price action,  
 > perfect for discretionary traders who want context without raw delta data.
 
@@ -108,7 +108,7 @@ What makes the **Impulsive Candles Indicator** so powerful is that it allows non
 
 In other words, this indicator acts as a **bridge between price action and order flow**, distilling complex microstructural information into a single visual cue.
 
-> 💡 The practical takeaway: impulsive candles mark where **aggressive participation** disrupted the auction process.  
+> The practical takeaway: impulsive candles mark where **aggressive participation** disrupted the auction process.  
 > These levels tend to attract price later as the market rebalances, allowing traders to profit from **retracements into prior imbalanced zones** without ever needing to open a footprint chart.
 
 ---
