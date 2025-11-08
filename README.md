@@ -8,7 +8,7 @@
 
 ---
 
-## 🧩 Overview
+## Overview
 
 The **Impulsive Candles Indicator** is a *TradingView Pine Script v6* tool designed to automatically highlight impulsive price moves, moments of strong participation and directional intent, without requiring traders to read order flow or footprint charts (maybe because they can't afford to buy aggregated or non-aggregated datafeed).  
 
@@ -21,7 +21,7 @@ This makes it particularly useful for:
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 The indicator filters candles based on a 3-part condition:
 1. **ATR Range Filter** → The bar’s total range must exceed a multiple of its average true range (`range ≥ ATR × multiplier`).
@@ -35,7 +35,7 @@ If all conditions are satisfied:
 
 ---
 
-## 📊 Why It Helps Traders
+## Why It Helps Traders
 
 In fast markets, **not everyone uses footprint or delta-based tools**, but impulsive movement *always* leaves a footprint on price, range, and volume.  
 This script visually encapsulates that data, allowing traders to:
@@ -48,7 +48,7 @@ It bridges the gap between **price action** and **order flow**, providing a “l
 
 ---
 
-## 🖼️ Visual Example (15-min ES - E-mini S&P 500 Futures)
+## Visual Example (15-min ES - E-mini S&P 500 Futures)
 
 <p align="center">
   <img src="./docs/assets/Screenshot%202025-11-04%20222053.png" width="88%" alt="ES 15-minute chart with impulsive candles highlighted">
@@ -84,7 +84,7 @@ without needing a footprint or order-flow chart.
 
 ---
 
-## 🔍 Why This Reflects Order Flow Imbalance (15-min ES - E-mini S&P 500 Futures)
+## Why This Reflects Order Flow Imbalance (15-min ES - E-mini S&P 500 Futures)
 
 <p align="center">
   <img src="./docs/assets/Screenshot%202025-11-04%20224200.png" width="70%" alt="15-min chart view" />
@@ -114,7 +114,7 @@ In other words, this indicator acts as a **bridge between price action and order
 ---
 
 
-## 🧠 Key Features
+## Key Features
 
 | Feature | Description |
 |----------|-------------|
@@ -126,7 +126,7 @@ In other words, this indicator acts as a **bridge between price action and order
 
 ---
 
-## ⚙️ Inputs
+## Inputs
 
 | Parameter | Description |
 |------------|-------------|
@@ -139,7 +139,7 @@ In other words, this indicator acts as a **bridge between price action and order
 
 ---
 
-## 🚀 Installation
+## Installation
 
 1. Open **TradingView** → **Pine Editor** tab.  
 2. Copy the contents of `indicators/impulsive_candles_v1.pine`.  
@@ -148,7 +148,7 @@ In other words, this indicator acts as a **bridge between price action and order
 
 ---
 
-## 🧩 License
+## License
 
 This project is released under the **MIT License**.  
 You are free to modify and distribute it with attribution.
