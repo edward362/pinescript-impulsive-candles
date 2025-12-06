@@ -23,7 +23,7 @@ This makes it particularly useful for:
 
 ## How It Works
 
-The indicator filters candles based on a 3-part condition:
+The indicator filters candles based on 3 conditions:
 1. **ATR Range Filter** → The bar’s total range must exceed a multiple of its average true range (`range ≥ ATR × multiplier`).
 2. **Volume Confirmation** → Volume must be significantly higher than the recent moving average of volume (`volume ≥ volMA × multiplier`).
 3. **Body Structure** → The candle’s body must represent a minimum percentage of the total range, filtering out wicks and noise.
