@@ -10,7 +10,7 @@
 
 ## Overview
 
-The **Impulsive Candles Indicator** is a *TradingView Pine Script v6* tool designed to automatically highlight impulsive price movements, moments of strong participation and directional intent, without requiring traders to read order flow or footprint charts (maybe because they can't afford to buy aggregated or non-aggregated datafeed).  
+The **Impulsive Candles Indicator** is a *TradingView Pine Script v6* tool designed to automatically highlight impulsive price moves, moments of strong participation and directional intent, without requiring traders to read order flow or footprint charts (maybe because they can't afford to buy aggregated or non-aggregated datafeed).  
 
 It acts as a **visual proxy for order flow imbalance**, combining **volatility (ATR)**, **volume strength**, and **candle body dominance** to detect when the market transitions from passive to aggressive trading behavior.  
 
